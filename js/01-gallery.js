@@ -26,7 +26,10 @@ function murkup(gallery) {
 }
 
 function hendleGalleryClick  (e) {
-	e.preventDefault();
+    e.preventDefault();
+    if (!e.target.classList.contains("gallery__image")) {
+			return;
+		}
 	const largeImgSrc = e.target.dataset.source;
 	instance = basicLightbox.create(`
 	    <img class="largeImg" src=${largeImgSrc} width="800" height="600">
