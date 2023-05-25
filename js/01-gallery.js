@@ -15,9 +15,9 @@ function murkup(gallery) {
   <a class="gallery__link" href='#'>
     <img
       class="gallery__image"
-      src=${preview}
-      data-source=${original}
-    alt=${description}
+      src="${preview}"
+      data-source="${original}"
+    alt="${description}"
     />
   </a>
 </li>`

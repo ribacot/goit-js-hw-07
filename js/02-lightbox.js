@@ -14,11 +14,11 @@ function murkup(gallery) {
 	return gallery
 		.map(
 			({ preview, original, description }) => `<li class="gallery__item gallery " >
-  <a class="gallery__link" href='${original}' >
+  <a class="gallery__link" href='${original}" >
     <img
       class="gallery__image"
-      src='${preview}'
-    alt='${description}'
+      src="${preview}"
+    alt="${description}"
  
     />
   </a>
@@ -26,5 +26,3 @@ function murkup(gallery) {
 		)
 		.join("");
 }
-
-
