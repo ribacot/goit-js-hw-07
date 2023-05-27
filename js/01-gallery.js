@@ -4,7 +4,6 @@ import { galleryItems } from "./gallery-items.js";
 const galleryEl = document.querySelector(".gallery");
 galleryEl.insertAdjacentHTML("afterbegin", murkup(galleryItems));
 galleryEl.addEventListener("click", hendleGalleryClick);
-document.addEventListener("keydown", HendleCloseEsc);
 
 let instance = null;
 
@@ -34,7 +33,9 @@ function hendleGalleryClick  (e) {
 	instance = basicLightbox.create(`
 	    <img class="largeImg" src=${largeImgSrc} width="800" height="600">
 	`);
-	instance.show();
+    instance.show();
+    document.addEventListener("keydown", HendleCloseEsc);
+
 };
 
 function HendleCloseEsc(e) {
