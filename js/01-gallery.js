@@ -39,8 +39,8 @@ function hendleGalleryClick  (e) {
 };
 
 function HendleCloseEsc(e) {
+    e.preventDefault();
 	if (e.key === "Escape" || e.key === "Enter") {
-		e.preventDefault();
 		instance.close();
 	}
 }
